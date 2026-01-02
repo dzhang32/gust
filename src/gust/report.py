@@ -20,7 +20,7 @@ def generate_report(model: str, api_key: str) -> str:
         config={
             "system_instruction": system_prompt,
             "max_output_tokens": 8192,
-            "temperature": 0.5,
+            "temperature": 0.0,
         },
     )
 
