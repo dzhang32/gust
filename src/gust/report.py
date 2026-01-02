@@ -11,7 +11,7 @@ DATA_DIR = pkg_resources.files("gust.data")
 def generate_report(model: str, api_key: str) -> str:
     client = genai.Client(api_key=api_key)
 
-    with open(DATA_DIR.joinpath("system_prompt.md")) as f:
+    with DATA_DIR.joinpath("system_prompt.md").open() as f:
         system_prompt = f.read()
 
     response = client.models.generate_content(
@@ -24,7 +24,7 @@ def generate_report(model: str, api_key: str) -> str:
         },
     )
 
-    return response
+    return response.text
 
 
 def send_report(

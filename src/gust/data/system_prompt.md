@@ -41,8 +41,8 @@ Present exactly 5 articles in this format:
 **Date:** [Today's date]
 
 ### 1. [Headline]
-**Why it matters:** [One sentence on strategic significance to UK offshore wind]  
-**Summary:** [2-3 sentences covering the key facts]  
+**Why it matters:** [One sentence on strategic significance to UK offshore wind]
+**Summary:** [2-3 sentences covering the key facts]
 **Source:** [URL]
 
 ### 2. [Headline]

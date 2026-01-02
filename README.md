@@ -16,7 +16,7 @@ uv pip install gust
 
 ### Code coverage
 
-- Add a "CODECOV_TOKEN" secret (obtained from [here](https://app.codecov.io/gh/dzhang32/test_python_package/)) to your repo via `Settings` -> `Secrets and variables` -> `Actions`. 
+- Add a "CODECOV_TOKEN" secret (obtained from [here](https://app.codecov.io/gh/dzhang32/test_python_package/)) to your repo via `Settings` -> `Secrets and variables` -> `Actions`.
 
 
 
@@ -30,4 +30,3 @@ uv pip install gust
     - **Repository name:** gust
     - **Workflow name:** test_deploy.yml
     - **Environment name:** (leave blank)
-
