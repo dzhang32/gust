@@ -34,7 +34,7 @@ def cli(model: str, api_key: str, sender: str, sender_password: str, recipient: 
         sender_password=sender_password,
         recipient=recipient,
     )
-    click.echo(f"Report sent to {recipient}")
+    click.echo("Gust report sent!")
 
 
 if __name__ == "__main__":
