@@ -5,7 +5,7 @@ from gust.report import generate_report, send_report
 
 @click.command()
 @click.option(
-    "--model", default="gemini-2.0-flash", help="Model to use for generation."
+    "--model", default="gemini-2.5-flash-lite", help="Model to use for generation."
 )
 @click.option(
     "--api-key", envvar="GEMINI_API_KEY", required=True, help="Gemini API key."
