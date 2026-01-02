@@ -32,4 +32,4 @@ jobs:
           dependencies: dev
 
       - name: Generate and send daily gust
-        run: gust --model gemini-2.5-flash
+        run: gust --model gemini-3-flash-preview
