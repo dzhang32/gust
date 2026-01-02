@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from gust.report import report
+from gust.report import generate_report
 
 
 def test_report():
@@ -11,7 +11,7 @@ def test_report():
     """
     load_dotenv()
     # Use the cheapest model for testing.
-    news_report = report(
+    news_report = generate_report(
         model="gemini-2.5-flash-lite", api_key=os.getenv("GEMINI_API_KEY")
     )
 
