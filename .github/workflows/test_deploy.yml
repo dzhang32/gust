@@ -33,9 +33,6 @@ jobs:
       - name: Run tests
         run: pytest
 
-
-
-
   deploy-pypi:
     runs-on: ubuntu-latest
 

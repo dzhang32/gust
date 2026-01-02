@@ -8,13 +8,13 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  email_cron:
     runs-on: ubuntu-latest
 
     env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GUST_SENDER: ${{ secrets.GUST_SENDER }}
+      GUST_SENDER_PASSWORD: ${{ secrets.GUST_SENDER_PASSWORD }}
+      GUST_RECIPIENT: ${{ secrets.GUST_RECIPIENT }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
 
@@ -28,8 +28,6 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           dependencies: dev
 
-      - name: Run pre-commit hooks
-        run: pre-commit run --all-files
+      - name: Generate and send daily gust
+        run: gust --model gemini-2.5-flash-lite
 
-      - name: Run tests
-        run: pytest
