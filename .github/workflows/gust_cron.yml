@@ -1,4 +1,4 @@
-name: email_cron
+name: gust_cron 
 
 on:
   push:
@@ -11,7 +11,7 @@ env:
   PYTHON_VERSION: "3.13"
 
 jobs:
-  email_cron:
+  gust:
     runs-on: ubuntu-latest
 
     env:
@@ -32,4 +32,4 @@ jobs:
           dependencies: dev
 
       - name: Generate and send daily gust
-        run: gust --model gemini-3-pro-preview
+        run: gust --model gemini-3-flash
