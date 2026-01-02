@@ -14,4 +14,5 @@ def test_report():
     news_report = report(
         model="gemini-2.5-flash-lite", api_key=os.getenv("GEMINI_API_KEY")
     )
+
     assert news_report.text != ""
