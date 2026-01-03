@@ -6,6 +6,8 @@ from email.mime.text import MIMEText
 import anthropic
 import markdown
 
+from gust.error import NoWeeklyGustFound
+
 DATA_DIR = pkg_resources.files("gust.data")
 
 
@@ -45,6 +47,13 @@ def generate_report(model: str, api_key: str) -> str:
     weekly_gust = re.sub(
         r".*## Weekly Gust", "## Weekly Gust", weekly_gust, flags=re.DOTALL
     )
+
+    if not weekly_gust_started or weekly_gust == "":
+        response_text = "".join(
+            block.text for block in response.content if block.type == "text"
+        )
+
+        NoWeeklyGustFound(f"Weekly gust not found, response text: {response_text}")
 
     return weekly_gust
 

@@ -1,0 +1,2 @@
+class NoWeeklyGustFound(ValueError):
+    pass
