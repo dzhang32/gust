@@ -1,4 +1,4 @@
-name: gust_cron 
+name: gust_cron
 
 on:
   push:
@@ -32,4 +32,4 @@ jobs:
           dependencies: dev
 
       - name: Generate and send daily gust
-        run: gust --model gemini-3-flash-preview
+        run: gust
