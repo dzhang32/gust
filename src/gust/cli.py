@@ -5,10 +5,10 @@ from gust.report import generate_report, send_report
 
 @click.command()
 @click.option(
-    "--model", default="gemini-2.5-flash-lite", help="Model to use for generation."
+    "--model", default="claude-haiku-4-5-20251001", help="Model to use for generation."
 )
 @click.option(
-    "--api-key", envvar="GEMINI_API_KEY", required=True, help="Gemini API key."
+    "--api-key", envvar="CLAUDE_API_KEY", required=True, help="Claude API key."
 )
 @click.option(
     "--sender", envvar="GUST_SENDER", required=True, help="Sender email address."

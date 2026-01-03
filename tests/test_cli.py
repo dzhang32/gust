@@ -6,16 +6,14 @@ from click.testing import CliRunner
 from gust.cli import cli
 
 
-@pytest.mark.skipif(
-    os.getenv("GITHUB_ACTIONS") == "true", reason="Avoid emails from GHA."
-)
+@pytest.mark.skipif(os.getenv("GITHUB_ACTIONS") == "true", reason="Avoid token usage.")
 def test_cli():
     runner = CliRunner()
     result = runner.invoke(
         cli,
         [
             "--model",
-            "gemini-2.5-flash-lite",
+            "claude-haiku-4-5-20251001",
         ],
     )
 
