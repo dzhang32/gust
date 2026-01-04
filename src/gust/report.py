@@ -12,6 +12,19 @@ DATA_DIR = pkg_resources.files("gust.data")
 
 
 def generate_report(model: str, api_key: str) -> str:
+    """
+    Generate an offshore wind industry report using the Anthropic API.
+
+    Args:
+        model: The Anthropic model identifier to use.
+        api_key: The Anthropic API key.
+
+    Returns:
+        A weekly gust report in markdown format.
+
+    Raises:
+        NoWeeklyGustFound: If the response does not contain a weekly gust section.
+    """
     client = anthropic.Anthropic(api_key=api_key)
 
     with DATA_DIR.joinpath("prompt.md").open() as f:
@@ -61,7 +74,16 @@ def generate_report(model: str, api_key: str) -> str:
 def send_report(
     report_text: str, sender: str, sender_password: str, recipient: str
 ) -> None:
-    # Convert markdown to HTML
+    """
+    Send the report as an HTML email via Gmail SMTP.
+
+    Args:
+        report_text: The report content in a markdown format.
+        sender: The sender's Gmail address.
+        sender_password: The sender's Gmail app password.
+        recipient: The recipient's email address.
+    """
+    # Convert markdown to HTML.
     html_body = markdown.markdown(report_text)
     html = f"""
     <html>

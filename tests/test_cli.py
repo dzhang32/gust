@@ -8,6 +8,9 @@ from gust.cli import cli
 
 @pytest.mark.skipif(os.getenv("GITHUB_ACTIONS") == "true", reason="Avoid token usage.")
 def test_cli():
+    """
+    Test that the CLI command executes successfully.
+    """
     runner = CliRunner()
     result = runner.invoke(
         cli,
