@@ -4,7 +4,7 @@ on:
   schedule:
     # 8:00 UTC (UK time) every Monday.
     - cron: '0 8 * * 1'
-  
+
 env:
   PYTHON_VERSION: "3.13"
 
@@ -27,6 +27,6 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           dependencies: dev
-          
+
       - name: Generate and send weekly gust
         run: gust --model claude-opus-4-5-20251101
