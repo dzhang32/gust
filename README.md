@@ -24,7 +24,7 @@ uv pip install .
 > gust --help
 Usage: gust [OPTIONS]
 
-  Gust - Generate and send daily offshore wind industry reports.
+  Gust - Generate and send weekly offshore wind news reports
 
 Options:
   --model TEXT             Model to use for generation.

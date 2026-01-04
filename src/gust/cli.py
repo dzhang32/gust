@@ -27,7 +27,7 @@ from gust.report import generate_report, send_report
 )
 def cli(model: str, api_key: str, sender: str, sender_password: str, recipient: str):
     """
-    Gust - Generate and send daily offshore wind industry reports.
+    Gust - Generate and send weekly offshore wind news reports.
     """
     gust_report = generate_report(model=model, api_key=api_key)
     send_report(
