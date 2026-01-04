@@ -1,5 +1,7 @@
 # gust
 
+[![gust_cron](https://github.com/dzhang32/gust/actions/workflows/gust_cron.yml/badge.svg)](https://github.com/dzhang32/gust/actions/workflows/gust_cron.yml)
+
 `gust` generates a summary of the weekly offshore wind news using the Anthropic API.
 
 ## Installation
