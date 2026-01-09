@@ -29,4 +29,4 @@ jobs:
           dependencies: dev
 
       - name: Generate and send weekly gust
-        run: gust --model claude-opus-4-5-20251101
+        run: gust --model claude-haiku-4-5-20251001
